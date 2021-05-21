@@ -1,8 +1,13 @@
-.intro-text, .intro, .welcome {
+.certificate, .intro-text, .intro, .welcome {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.certificate, .welcome {
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 * {
@@ -34,8 +39,6 @@ section {
 .welcome {
   text-align: center;
   background-image: url(../img/welcome.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 100vh;
   color: white;
 }
@@ -83,6 +86,19 @@ section {
 .intro-text-format h4 {
   font-size: 20px;
   color: white;
+}
+
+.certificate {
+  justify-content: space-around;
+  background-image: url(../img/certificate.jpg);
+  width: 100%;
+  min-height: 300px;
+}
+.certificate-card {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  margin: 20px;
 }
 
 /*# sourceMappingURL=index.css.map */

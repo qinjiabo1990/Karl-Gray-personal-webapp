@@ -20,6 +20,11 @@ $font-title: "Poppins", sans-serif;
   vertical-align: baseline;
 }
 
+%bg-image-set {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 * {
   box-sizing: border-box;
   font-family: inherit;
@@ -49,10 +54,9 @@ section {
 
 .welcome {
   @extend %flex-row;
+  @extend %bg-image-set;
   text-align: center;
   background-image: url(../img/welcome.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 100vh;
   color: $font-white;
   &-text {
@@ -103,7 +107,19 @@ section {
             }
         }
     }
-    
-    
+}
 
+.certificate{
+    @extend %bg-image-set;
+    @extend %flex-row;
+    justify-content: space-around;
+    background-image: url(../img/certificate.jpg);
+    width: 100%;
+    min-height: 300px;
+    &-card{
+        text-align: center;
+        color:$font-white;
+        font-size: 25px;
+        margin: 20px;
+    }
 }

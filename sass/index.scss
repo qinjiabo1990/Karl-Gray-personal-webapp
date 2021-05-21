@@ -1,0 +1,109 @@
+$font-gray: gray;
+$font-black: black;
+$font-white: white;
+$font-article: #cccccc;
+$bg-white: white;
+$bg-black: black;
+$bg-section: #282828;
+$font-title: "Poppins", sans-serif;
+
+%flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+%flex-colum {
+  display: flex;
+  flex-direction: column;
+  vertical-align: baseline;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+header {
+  width: 250px;
+  height: 100%;
+  color: $font-white;
+  background-color: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+
+section {
+  margin-left: -10px;
+  margin-right: -8px;
+  margin-top: -10px;
+  padding-left: 250px;
+}
+
+.container {
+  width: 100%;
+}
+
+.welcome {
+  @extend %flex-row;
+  text-align: center;
+  background-image: url(../img/welcome.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: $font-white;
+  &-text {
+    margin-top: 15%;
+    font-family: $font-title;
+    h1 {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 30px;
+      margin-top: 10%;
+    }
+    p {
+      font-size: 25px;
+      margin-top: 15%;
+    }
+  }
+}
+
+.intro{
+    @extend %flex-row;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+    &-text{
+        @extend %flex-row;
+        background-color: $bg-section;
+        color: #cccccc;
+        width: 90%;
+        
+        &-format{
+            width: 65%;
+            margin-bottom: 10%;
+            h2{
+                margin-top: 10%;
+                font-size: 35px;
+                color: $font-white;
+                font-family: $font-title;
+            }
+            p{
+                font-size: 16px;
+                margin-bottom: 15%;
+                line-height: 1.7;
+            }
+            h4{
+                font-size: 20px;
+                color: $font-white;
+            }
+        }
+    }
+    
+    
+
+}

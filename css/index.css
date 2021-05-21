@@ -1,0 +1,88 @@
+.intro-text, .intro, .welcome {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+header {
+  width: 250px;
+  height: 100%;
+  color: white;
+  background-color: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+section {
+  margin-left: -10px;
+  margin-right: -8px;
+  margin-top: -10px;
+  padding-left: 250px;
+}
+
+.container {
+  width: 100%;
+}
+
+.welcome {
+  text-align: center;
+  background-image: url(../img/welcome.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+}
+.welcome-text {
+  margin-top: 15%;
+  font-family: "Poppins", sans-serif;
+}
+.welcome-text h1 {
+  font-size: 40px;
+}
+.welcome-text h2 {
+  font-size: 30px;
+  margin-top: 10%;
+}
+.welcome-text p {
+  font-size: 25px;
+  margin-top: 15%;
+}
+
+.intro {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  text-align: center;
+}
+.intro-text {
+  background-color: #282828;
+  color: #cccccc;
+  width: 90%;
+}
+.intro-text-format {
+  width: 65%;
+  margin-bottom: 10%;
+}
+.intro-text-format h2 {
+  margin-top: 10%;
+  font-size: 35px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.intro-text-format p {
+  font-size: 16px;
+  margin-bottom: 15%;
+  line-height: 1.7;
+}
+.intro-text-format h4 {
+  font-size: 20px;
+  color: white;
+}
+
+/*# sourceMappingURL=index.css.map */

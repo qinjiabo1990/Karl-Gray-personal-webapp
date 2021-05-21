@@ -1,11 +1,11 @@
-.certificate, .intro-text, .intro, .welcome {
+.experience, .intro-text, .intro, .welcome {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.certificate, .welcome {
+.experience, .welcome {
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -88,13 +88,13 @@ section {
   color: white;
 }
 
-.certificate {
+.experience {
   justify-content: space-around;
   background-image: url(../img/certificate.jpg);
   width: 100%;
   min-height: 300px;
 }
-.certificate-card {
+.experience-card {
   text-align: center;
   color: white;
   font-size: 25px;

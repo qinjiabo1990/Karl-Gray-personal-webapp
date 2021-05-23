@@ -1,16 +1,22 @@
-.services-cards-pair, .services, .experience, .intro-text, .intro, .welcome {
+.clients, .services-cards-pair, .services, .experience, .intro-text, .intro, .welcome {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.services-cards-pair-conditioning, .services-cards-pair-injury, .services-cards-pair-sport, .services-cards-pair-cardio, .services-cards-top, .experience, .welcome {
+.clients-cards {
+  display: flex;
+  flex-direction: column;
+  vertical-align: baseline;
+}
+
+.clients-cards-ages-bg, .clients-cards-teams-bg, .services-cards-pair-conditioning, .services-cards-pair-injury, .services-cards-pair-sport, .services-cards-pair-cardio, .services-cards-top, .experience, .welcome {
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.services-cards-pair-conditioning p, .services-cards-pair-injury p, .services-cards-pair-sport p, .services-cards-pair-cardio p, .services-cards-top p {
+.clients-cards-ages p, .clients-cards-teams p, .services-cards-pair-conditioning p, .services-cards-pair-injury p, .services-cards-pair-sport p, .services-cards-pair-cardio p, .services-cards-top p {
   position: absolute;
   top: 30%;
   width: 100%;
@@ -113,6 +119,9 @@ section {
   margin: 20px;
 }
 
+.services {
+  margin-bottom: 10%;
+}
 .services-cards {
   width: 70%;
 }
@@ -151,6 +160,38 @@ section {
   height: 400px;
   width: 49.5%;
   background-image: url(../img/season-conditioning.jpg);
+}
+
+.clients-cards {
+  width: 70%;
+}
+.clients-cards-teams {
+  position: relative;
+}
+.clients-cards-teams-bg {
+  height: 300px;
+  width: 100%;
+  margin-right: 1%;
+  background-image: url(../img/professional-training.jpg);
+}
+.clients-cards-teams p {
+  text-align: center;
+  font-size: 25px;
+  top: 60%;
+}
+.clients-cards-ages {
+  position: relative;
+}
+.clients-cards-ages-bg {
+  height: 300px;
+  width: 100%;
+  margin-right: 1%;
+  background-image: url(../img/all-ages-training.jpg);
+}
+.clients-cards-ages p {
+  text-align: center;
+  font-size: 25px;
+  top: 60%;
 }
 
 /*# sourceMappingURL=index.css.map */

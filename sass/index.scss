@@ -139,6 +139,7 @@ section {
 
 .services {
   @extend %flex-row;
+  margin-bottom: 10%;
   &-cards {
     width: 70%;
     &-top {
@@ -189,4 +190,44 @@ section {
       }
     }
   }
+}
+
+.clients{
+    @extend %flex-row;
+    &-cards{
+        @extend %flex-colum;
+        width: 70%;
+        &-teams{
+            position: relative;
+            @extend %card-text;
+            &-bg{
+                @extend %bg-image-set;
+                height: 300px;
+                width: 100%;
+                margin-right: 1%;
+                background-image: url(../img/professional-training.jpg);
+            }
+            p{
+                text-align: center;
+                font-size: 25px;
+                top: 60%;
+            }
+        }
+        &-ages{
+            position: relative;
+            @extend %card-text;
+            &-bg{
+                @extend %bg-image-set;
+                height: 300px;
+                width: 100%;
+                margin-right: 1%;
+                background-image: url(../img/all-ages-training.jpg);
+            }
+            p{
+                text-align: center;
+                font-size: 25px;
+                top: 60%;
+            }
+        }
+    }
 }

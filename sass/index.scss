@@ -17,7 +17,7 @@ $font-title: "Poppins", sans-serif;
 %flex-colum {
   display: flex;
   flex-direction: column;
-  vertical-align: baseline;
+  vertical-align: center;
 }
 
 %bg-image-set {
@@ -34,8 +34,12 @@ $font-title: "Poppins", sans-serif;
     color:$font-white;
     font-family: $font-title;
     font-size: 24px;
-    background-color: rgba(108, 122, 137, 0.5) ;
+    background-color: rgba(108, 122, 137, 0.5);
   }
+}
+
+%component-gap {
+    margin-bottom: 10%;
 }
 
 * {
@@ -67,6 +71,7 @@ section {
 .welcome {
   @extend %flex-row;
   @extend %bg-image-set;
+  @extend %component-gap;
   text-align: center;
   background-image: url(../img/welcome.jpg);
   height: 100vh;
@@ -90,8 +95,7 @@ section {
 
 .intro {
   @extend %flex-row;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  @extend %component-gap;
   text-align: center;
   &-text {
     @extend %flex-row;
@@ -124,11 +128,11 @@ section {
 .experience {
   @extend %bg-image-set;
   @extend %flex-row;
+  @extend %component-gap;
   justify-content: space-around;
   background-image: url(../img/certificate.jpg);
   width: 100%;
   min-height: 300px;
-  margin-bottom: 10%;
   &-card {
     text-align: center;
     color: $font-white;
@@ -139,7 +143,7 @@ section {
 
 .services {
   @extend %flex-row;
-  margin-bottom: 10%;
+  @extend %component-gap;
   &-cards {
     width: 70%;
     &-top {
@@ -194,6 +198,7 @@ section {
 
 .clients{
     @extend %flex-row;
+    @extend %component-gap;
     &-cards{
         @extend %flex-colum;
         width: 70%;
@@ -231,3 +236,37 @@ section {
         }
     }
 }
+
+.program{
+    @extend %bg-image-set;
+    @extend %component-gap;
+    background-image: url(../img/program.jpg);
+    height: 400px;
+    position: relative;
+    &-text{
+        align-content: center;
+        position: absolute;
+        color: $font-white;
+        text-align: center;
+        top:20%;
+        width: 100%;
+        h1{
+            font-size: 30px;
+        }
+        &-article{
+            @extend %flex-row;
+            p{
+                width: 50%;
+            }
+        }
+        button{
+            width: 230px;
+            height: 50px;
+            background-color: red;
+            color: $font-white;
+            border: none;
+            font-size: 16px;
+        }
+    }
+}
+

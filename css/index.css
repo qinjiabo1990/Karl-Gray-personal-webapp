@@ -1,4 +1,4 @@
-.clients, .services-cards-pair, .services, .experience, .intro-text, .intro, .welcome {
+.program-text-article, .clients, .services-cards-pair, .services, .experience, .intro-text, .intro, .welcome {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -8,10 +8,10 @@
 .clients-cards {
   display: flex;
   flex-direction: column;
-  vertical-align: baseline;
+  vertical-align: center;
 }
 
-.clients-cards-ages-bg, .clients-cards-teams-bg, .services-cards-pair-conditioning, .services-cards-pair-injury, .services-cards-pair-sport, .services-cards-pair-cardio, .services-cards-top, .experience, .welcome {
+.program, .clients-cards-ages-bg, .clients-cards-teams-bg, .services-cards-pair-conditioning, .services-cards-pair-injury, .services-cards-pair-sport, .services-cards-pair-cardio, .services-cards-top, .experience, .welcome {
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -25,6 +25,10 @@
   font-family: "Poppins", sans-serif;
   font-size: 24px;
   background-color: rgba(108, 122, 137, 0.5);
+}
+
+.program, .clients, .services, .experience, .intro, .welcome {
+  margin-bottom: 10%;
 }
 
 * {
@@ -76,8 +80,6 @@ section {
 }
 
 .intro {
-  margin-top: 10%;
-  margin-bottom: 10%;
   text-align: center;
 }
 .intro-text {
@@ -110,7 +112,6 @@ section {
   background-image: url(../img/certificate.jpg);
   width: 100%;
   min-height: 300px;
-  margin-bottom: 10%;
 }
 .experience-card {
   text-align: center;
@@ -119,9 +120,6 @@ section {
   margin: 20px;
 }
 
-.services {
-  margin-bottom: 10%;
-}
 .services-cards {
   width: 70%;
 }
@@ -192,6 +190,34 @@ section {
   text-align: center;
   font-size: 25px;
   top: 60%;
+}
+
+.program {
+  background-image: url(../img/program.jpg);
+  height: 400px;
+  position: relative;
+}
+.program-text {
+  align-content: center;
+  position: absolute;
+  color: white;
+  text-align: center;
+  top: 20%;
+  width: 100%;
+}
+.program-text h1 {
+  font-size: 30px;
+}
+.program-text-article p {
+  width: 50%;
+}
+.program-text button {
+  width: 230px;
+  height: 50px;
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=index.css.map */

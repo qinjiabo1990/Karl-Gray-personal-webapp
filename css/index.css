@@ -1,11 +1,11 @@
-.program-text-article, .clients, .services-cards-pair, .services, .experience, .intro-text, .intro, .welcome {
+footer, .comment-cards-card, .comment, .program-text-article, .clients, .services-cards-pair, .services, .experience, .intro-text, .intro, .welcome {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.clients-cards {
+.comment-cards, .clients-cards {
   display: flex;
   flex-direction: column;
   vertical-align: center;
@@ -218,6 +218,35 @@ section {
   color: white;
   border: none;
   font-size: 16px;
+}
+
+.comment-cards {
+  width: 80%;
+}
+.comment-cards-card {
+  border: 1px solid red;
+  min-width: 210px;
+  margin: 15px;
+  padding: 20px;
+}
+.comment-cards-card-article {
+  width: 49%;
+  min-width: 200px;
+}
+.comment-cards-card-article img {
+  width: 50px;
+}
+.comment-cards-card-client {
+  padding-top: 30px;
+  padding-left: 60px;
+}
+
+footer {
+  padding-left: 250px;
+  padding-top: 100px;
+}
+footer .copyright {
+  width: 80%;
 }
 
 /*# sourceMappingURL=index.css.map */

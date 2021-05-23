@@ -31,7 +31,7 @@ $font-title: "Poppins", sans-serif;
     top: 30%;
     width: 100%;
     text-align: center;
-    color:$font-white;
+    color: $font-white;
     font-family: $font-title;
     font-size: 24px;
     background-color: rgba(108, 122, 137, 0.5);
@@ -39,7 +39,7 @@ $font-title: "Poppins", sans-serif;
 }
 
 %component-gap {
-    margin-bottom: 10%;
+  margin-bottom: 10%;
 }
 
 * {
@@ -196,77 +196,115 @@ section {
   }
 }
 
-.clients{
-    @extend %flex-row;
-    @extend %component-gap;
-    &-cards{
-        @extend %flex-colum;
-        width: 70%;
-        &-teams{
-            position: relative;
-            @extend %card-text;
-            &-bg{
-                @extend %bg-image-set;
-                height: 300px;
-                width: 100%;
-                margin-right: 1%;
-                background-image: url(../img/professional-training.jpg);
-            }
-            p{
-                text-align: center;
-                font-size: 25px;
-                top: 60%;
-            }
-        }
-        &-ages{
-            position: relative;
-            @extend %card-text;
-            &-bg{
-                @extend %bg-image-set;
-                height: 300px;
-                width: 100%;
-                margin-right: 1%;
-                background-image: url(../img/all-ages-training.jpg);
-            }
-            p{
-                text-align: center;
-                font-size: 25px;
-                top: 60%;
-            }
-        }
-    }
-}
-
-.program{
-    @extend %bg-image-set;
-    @extend %component-gap;
-    background-image: url(../img/program.jpg);
-    height: 400px;
-    position: relative;
-    &-text{
-        align-content: center;
-        position: absolute;
-        color: $font-white;
-        text-align: center;
-        top:20%;
+.clients {
+  @extend %flex-row;
+  @extend %component-gap;
+  &-cards {
+    @extend %flex-colum;
+    width: 70%;
+    &-teams {
+      position: relative;
+      @extend %card-text;
+      &-bg {
+        @extend %bg-image-set;
+        height: 300px;
         width: 100%;
-        h1{
-            font-size: 30px;
-        }
-        &-article{
-            @extend %flex-row;
-            p{
-                width: 50%;
-            }
-        }
-        button{
-            width: 230px;
-            height: 50px;
-            background-color: red;
-            color: $font-white;
-            border: none;
-            font-size: 16px;
-        }
+        margin-right: 1%;
+        background-image: url(../img/professional-training.jpg);
+      }
+      p {
+        text-align: center;
+        font-size: 25px;
+        top: 60%;
+      }
     }
+    &-ages {
+      position: relative;
+      @extend %card-text;
+      &-bg {
+        @extend %bg-image-set;
+        height: 300px;
+        width: 100%;
+        margin-right: 1%;
+        background-image: url(../img/all-ages-training.jpg);
+      }
+      p {
+        text-align: center;
+        font-size: 25px;
+        top: 60%;
+      }
+    }
+  }
 }
 
+.program {
+  @extend %bg-image-set;
+  @extend %component-gap;
+  background-image: url(../img/program.jpg);
+  height: 400px;
+  position: relative;
+  &-text {
+    align-content: center;
+    position: absolute;
+    color: $font-white;
+    text-align: center;
+    top: 20%;
+    width: 100%;
+    h1 {
+      font-size: 30px;
+    }
+    &-article {
+      @extend %flex-row;
+      p {
+        width: 50%;
+      }
+    }
+    button {
+      width: 230px;
+      height: 50px;
+      background-color: red;
+      color: $font-white;
+      border: none;
+      font-size: 16px;
+    }
+  }
+}
+
+.comment {
+  @extend %flex-row;
+  &-cards{
+    @extend %flex-colum;
+    width: 80%;
+    // min-width: 350px;
+    &-card{
+      @extend %flex-row;
+      border: 1px solid red;
+      min-width: 210px;
+      margin: 15px;
+      padding: 20px;
+      &-article{
+        width: 49%;
+        min-width: 200px;
+        img{
+          width: 50px;
+        }
+      }
+      &-client{
+        padding-top: 30px;
+        padding-left:60px;
+      }
+    }
+  }
+}
+
+
+
+
+footer{
+  @extend %flex-row;
+  padding-left: 250px;
+  padding-top: 100px;
+  .copyright{
+    width: 80%;
+  }
+}

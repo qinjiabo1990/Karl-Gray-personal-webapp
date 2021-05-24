@@ -1,17 +1,17 @@
-footer, .comment-cards-card, .comment, .program-text-article, .clients, .services-cards-pair, .services, .experience, .intro-text, .intro, .welcome {
+footer, .contact-form form div, .contact-form, .contact, .comment-cards-card, .comment, .program-text-article, .clients, .services-cards-pair, .services, .experience, .intro-text, .intro, .welcome {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.comment-cards, .clients-cards {
+.contact-form form, .comment-cards, .clients-cards {
   display: flex;
   flex-direction: column;
   vertical-align: center;
 }
 
-.program, .clients-cards-ages-bg, .clients-cards-teams-bg, .services-cards-pair-conditioning, .services-cards-pair-injury, .services-cards-pair-sport, .services-cards-pair-cardio, .services-cards-top, .experience, .welcome {
+.contact, .program, .clients-cards-ages-bg, .clients-cards-teams-bg, .services-cards-pair-conditioning, .services-cards-pair-injury, .services-cards-pair-sport, .services-cards-pair-cardio, .services-cards-top, .experience, .welcome {
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -27,7 +27,7 @@ footer, .comment-cards-card, .comment, .program-text-article, .clients, .service
   background-color: rgba(108, 122, 137, 0.5);
 }
 
-.program, .clients, .services, .experience, .intro, .welcome {
+.comment, .program, .clients, .services, .experience, .intro, .welcome {
   margin-bottom: 10%;
 }
 
@@ -239,6 +239,54 @@ section {
 .comment-cards-card-client {
   padding-top: 30px;
   padding-left: 60px;
+}
+
+.contact {
+  background-image: url(../img/contact.jpg);
+  height: 500px;
+}
+.contact-form {
+  padding-top: 100px;
+  margin-right: 1%;
+}
+.contact-form form {
+  text-align: center;
+}
+.contact-form form input {
+  font-size: 15px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 30px;
+}
+.contact-form form textarea {
+  font-size: 15px;
+  padding: 10px 0 0 10px;
+  margin-bottom: 30px;
+}
+.contact-form form div button {
+  background-color: black;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.contact-details {
+  margin-left: 30px;
+  width: 350px;
+  min-width: 300px;
+  padding-top: 90px;
+  padding-left: 100px;
+  color: white;
+}
+.contact-details h3 {
+  font-size: 20px;
+}
+.contact-details p {
+  margin-top: 30px;
+  font-size: 18px;
 }
 
 footer {

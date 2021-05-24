@@ -272,6 +272,7 @@ section {
 
 .comment {
   @extend %flex-row;
+  @extend %component-gap;
   &-cards{
     @extend %flex-colum;
     width: 80%;
@@ -297,8 +298,60 @@ section {
   }
 }
 
-
-
+.contact{
+  @extend %flex-row;
+  @extend %bg-image-set;
+  background-image: url(../img/contact.jpg);
+  height: 500px;
+  &-form{
+    @extend %flex-row;
+    padding-top: 100px;
+    margin-right: 1%;
+    form{
+      @extend %flex-colum;
+      text-align: center;
+      input{
+        font-size: 15px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        width: 300px;
+        height: 30px;
+      }
+      textarea{
+        font-size: 15px;
+        padding: 10px 0 0 10px;
+        margin-bottom: 30px;
+      }
+      div{
+        @extend %flex-row;
+          button{
+            background-color: $font-black;
+            color: $bg-white;
+            width: 200px;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+          }
+      }
+    }
+  }
+  &-details{
+    margin-left: 30px;
+    width: 350px;
+    min-width: 300px;
+    padding-top: 90px;
+    padding-left: 100px;
+    color: $font-white;
+    h3{
+      font-size: 20px;
+    }
+    p{
+      margin-top: 30px;
+      font-size: 18px;
+    }
+  }
+}
 
 footer{
   @extend %flex-row;

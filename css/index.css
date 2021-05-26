@@ -1,11 +1,11 @@
-footer, .contact-form form div, .contact-form, .contact, .comment-cards-card, .comment, .program-text-article, .clients, .services-cards-pair, .services, .experience, .intro-text, .intro, .welcome {
+footer, .contact-form form div, .contact-form, .contact, .comment-cards-card, .comment, .program-text-article, .clients, .services-cards-pair, .services, .experience, .intro-text, .intro, .welcome, header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.contact-form form, .comment-cards, .clients-cards {
+.contact-form form, .comment-cards, .clients-cards, header nav {
   display: flex;
   flex-direction: column;
   vertical-align: center;
@@ -45,7 +45,41 @@ header {
   left: 0;
   top: 0;
 }
+header nav {
+  padding-top: 50px;
+  padding-right: 80px;
+}
+header nav a {
+  margin-top: 30px;
+  text-decoration: none;
+  color: white;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
 
+@media only screen and (max-width: 600px) {
+  body {
+    margin: auto;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 100px;
+    width: 100%;
+  }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  header nav a {
+    display: none;
+  }
+}
 section {
   margin-left: -10px;
   margin-right: -8px;
@@ -53,6 +87,12 @@ section {
   padding-left: 250px;
 }
 
+@media only screen and (max-width: 600px) {
+  section {
+    margin: 0;
+    padding: 0;
+  }
+}
 .container {
   width: 100%;
 }
@@ -243,10 +283,10 @@ section {
 
 .contact {
   background-image: url(../img/contact.jpg);
-  height: 500px;
+  height: 100%;
 }
 .contact-form {
-  padding-top: 100px;
+  padding: 100px 0;
   margin-right: 1%;
 }
 .contact-form form {
@@ -278,7 +318,6 @@ section {
   width: 350px;
   min-width: 300px;
   padding-top: 90px;
-  padding-left: 100px;
   color: white;
 }
 .contact-details h3 {

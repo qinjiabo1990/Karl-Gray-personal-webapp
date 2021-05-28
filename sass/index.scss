@@ -3,7 +3,7 @@ $font-black: black;
 $font-white: white;
 $font-article: #cccccc;
 $bg-white: white;
-$bg-black: black;
+$bt-red: rgba(197, 45, 45, 0.89);
 $bg-section: #282828;
 $font-title: "Poppins", sans-serif;
 
@@ -52,7 +52,7 @@ header {
   width: 250px;
   height: 100%;
   color: $font-white;
-  background-color: black;
+  background-color: $bg-section;
   position: fixed;
   left: 0;
   top: 0;
@@ -180,11 +180,13 @@ section {
   background-image: url(../img/certificate.jpg);
   width: 100%;
   min-height: 300px;
+  height: 100%;
+  align-items: center;
   &-card {
+    min-width: 200px;
     text-align: center;
     color: $font-white;
     font-size: 25px;
-    margin: 20px;
   }
 }
 
@@ -204,39 +206,39 @@ section {
     }
     &-pair {
       @extend %flex-row;
-      margin-top: 5px;
+      margin-top: 15px;
       &-cardio {
         @extend %bg-image-set;
         position: relative;
         @extend %card-text;
-        width: 49.5%;
-        height: 300px;
+        width: 49%;
+        height: 400px;
         background-image: url(../img/cardio.jpg);
-        margin-right: 1%;
+        margin-right: 2%;
       }
       &-sport {
         @extend %bg-image-set;
         position: relative;
         @extend %card-text;
-        width: 49.5%;
-        height: 300px;
+        width: 49%;
+        height: 400px;
         background-image: url(../img/sport.jpg);
       }
       &-injury {
         @extend %bg-image-set;
         position: relative;
         @extend %card-text;
-        width: 49.5%;
+        width: 49%;
         height: 400px;
         background-image: url(../img/injury.jpg);
-        margin-right: 1%;
+        margin-right: 2%;
       }
       &-conditioning {
         @extend %bg-image-set;
         position: relative;
         @extend %card-text;
         height: 400px;
-        width: 49.5%;
+        width: 49%;
         background-image: url(../img/season-conditioning.jpg);
       }
     }
@@ -246,41 +248,20 @@ section {
 .clients {
   @extend %flex-row;
   @extend %component-gap;
+  background-color: $bg-section;
   &-cards {
-    @extend %flex-colum;
-    width: 70%;
-    &-teams {
-      position: relative;
-      @extend %card-text;
-      &-bg {
-        @extend %bg-image-set;
-        height: 300px;
-        width: 100%;
-        margin-right: 1%;
-        background-image: url(../img/professional-training.jpg);
-      }
+    @extend %flex-row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    line-height: 50px;
       p {
+        width: 80%;
         text-align: center;
         font-size: 25px;
-        top: 60%;
+        color:$font-white;
       }
-    }
-    &-ages {
-      position: relative;
-      @extend %card-text;
-      &-bg {
-        @extend %bg-image-set;
-        height: 300px;
-        width: 100%;
-        margin-right: 1%;
-        background-image: url(../img/all-ages-training.jpg);
-      }
-      p {
-        text-align: center;
-        font-size: 25px;
-        top: 60%;
-      }
-    }
   }
 }
 
@@ -309,7 +290,7 @@ section {
     button {
       width: 230px;
       height: 50px;
-      background-color: red;
+      background-color: $bt-red;
       color: $font-white;
       border: none;
       font-size: 16px;
@@ -326,7 +307,9 @@ section {
     // min-width: 350px;
     &-card{
       @extend %flex-row;
+      align-items: stretch;
       border: 1px solid red;
+      border-radius: 12px;
       min-width: 210px;
       margin: 15px;
       padding: 20px;
@@ -350,16 +333,16 @@ section {
   @extend %bg-image-set;
   background-image: url(../img/contact.jpg);
   height: 100%;
+  justify-content: space-around;
+  align-content: center;
+  padding: 60px 0;
   &-form{
     @extend %flex-row;
-    padding: 100px 0;
-    margin-right: 1%;
     form{
       @extend %flex-colum;
       text-align: center;
       input{
         font-size: 15px;
-        padding-left: 10px;
         margin-bottom: 20px;
         width: 300px;
         height: 30px;
@@ -372,7 +355,8 @@ section {
       div{
         @extend %flex-row;
           button{
-            background-color: $font-black;
+            background-color: $bt-red;
+            border-radius: 12px;
             color: $bg-white;
             width: 200px;
             height: 50px;
@@ -384,17 +368,13 @@ section {
     }
   }
   &-details{
-    margin-left: 30px;
     width: 350px;
     min-width: 300px;
-    padding-top: 90px;
-    //padding-left: 100px;
     color: $font-white;
     h3{
       font-size: 20px;
     }
     p{
-      margin-top: 30px;
       font-size: 18px;
     }
   }

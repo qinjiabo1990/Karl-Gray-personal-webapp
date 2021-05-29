@@ -107,7 +107,7 @@ section {
 .welcome-nav button {
   background-color: transparent;
   border: unset;
-  color: black;
+  color: #e2b8aa;
   font-size: 20px;
 }
 .welcome-text {

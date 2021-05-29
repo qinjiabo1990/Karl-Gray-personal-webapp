@@ -2,6 +2,7 @@ $font-gray: gray;
 $font-black: black;
 $font-white: white;
 $font-article: #cccccc;
+$font-rose: #e2b8aa;
 $bg-white: white;
 $bt-red: rgba(197, 45, 45, 0.89);
 $bg-section: #282828;
@@ -17,6 +18,7 @@ $font-title: "Poppins", sans-serif;
 %flex-colum {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   vertical-align: center;
 }
 
@@ -28,7 +30,7 @@ $font-title: "Poppins", sans-serif;
 %card-text {
   p {
     position: absolute;
-    top: 30%;
+    top: 280px;
     width: 100%;
     text-align: center;
     color: $font-white;
@@ -49,22 +51,36 @@ $font-title: "Poppins", sans-serif;
 
 header {
   @extend %flex-row;
-  width: 250px;
+  width: 300px;
   height: 100%;
   color: $font-white;
   background-color: $bg-section;
+  font-family: $font-title;
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
+  display: none;
+  z-index: 1;
   nav {
     @extend %flex-colum;
+    width: 100%;
+    text-align: center;
     padding-top: 50px;
-    padding-right: 80px;
-    a{
+
+    button {
+      border: unset;
+      background-color: transparent;
+      color: $font-rose;
+      i {
+        font-size: 30px;
+      }
+    }
+    a {
       margin-top: 30px;
       text-decoration: none;
       color: $font-white;
-      &:hover{
+      font-size: 20px;
+      &:hover {
         text-decoration: underline;
       }
     }
@@ -72,44 +88,22 @@ header {
 }
 
 @media only screen and (max-width: 600px) {
-  body{
+  body {
     margin: auto;
   }
-  header{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    height: 100px;
-    width: 100%;
-    nav{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding: 0;
-      a{
-        display: none;
-      }
-    }
-  }
 }
-
-
-
 
 section {
   margin-left: -10px;
   margin-right: -8px;
   margin-top: -10px;
-  padding-left: 250px;
 }
 
 @media only screen and (max-width: 600px) {
   section {
     margin: 0;
-    padding: 0;
   }
 }
-
 
 .container {
   width: 100%;
@@ -119,23 +113,42 @@ section {
   @extend %flex-row;
   @extend %bg-image-set;
   @extend %component-gap;
-  text-align: center;
   background-image: url(../img/welcome.jpg);
   height: 100vh;
   color: $font-white;
+  &-nav {
+    @extend %flex-row;
+    position: fixed;
+    justify-content: space-between;
+    width: 80%;
+    height: 50px;
+    padding-top: 20px;
+    button {
+      background-color: transparent;
+      border: unset;
+      color: $font-black;
+      font-size: 20px;
+    }
+  }
   &-text {
-    margin-top: 15%;
+    @extend %flex-colum;
+    justify-content: center;
+    align-content: flex-start;
+    padding-right: 150px;
     font-family: $font-title;
+    width: 80%;
     h1 {
       font-size: 40px;
+      width: 260px;
+      color: $font-rose;
     }
     h2 {
-      font-size: 30px;
+      width: 300px;
+      color: $font-white;
       margin-top: 10%;
     }
     p {
       font-size: 25px;
-      margin-top: 15%;
     }
   }
 }
@@ -198,7 +211,11 @@ section {
     &-top {
       @extend %bg-image-set;
       @extend %card-text;
+      p{
+        top: 100px;
+      }
       position: relative;
+      z-index: -1;
       width: 100%;
       min-width: 200px;
       height: 200px;
@@ -210,6 +227,7 @@ section {
       &-cardio {
         @extend %bg-image-set;
         position: relative;
+        z-index: -1;
         @extend %card-text;
         width: 49%;
         height: 400px;
@@ -219,6 +237,7 @@ section {
       &-sport {
         @extend %bg-image-set;
         position: relative;
+        z-index: -1;
         @extend %card-text;
         width: 49%;
         height: 400px;
@@ -227,6 +246,7 @@ section {
       &-injury {
         @extend %bg-image-set;
         position: relative;
+        z-index: -1;
         @extend %card-text;
         width: 49%;
         height: 400px;
@@ -236,6 +256,7 @@ section {
       &-conditioning {
         @extend %bg-image-set;
         position: relative;
+        z-index: -1;
         @extend %card-text;
         height: 400px;
         width: 49%;
@@ -245,54 +266,34 @@ section {
   }
 }
 
-.clients {
-  @extend %flex-row;
-  @extend %component-gap;
-  background-color: $bg-section;
-  &-cards {
-    @extend %flex-row;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    min-height: 200px;
-    line-height: 50px;
-      p {
-        width: 80%;
-        text-align: center;
-        font-size: 25px;
-        color:$font-white;
-      }
-  }
-}
-
 .program {
   @extend %bg-image-set;
   @extend %component-gap;
   background-image: url(../img/program.jpg);
   height: 400px;
   position: relative;
+  z-index: -1;
   &-text {
+    @extend %flex-colum;
     align-content: center;
     position: absolute;
     color: $font-white;
     text-align: center;
     top: 20%;
     width: 100%;
-    h1 {
-      font-size: 30px;
-    }
-    &-article {
-      @extend %flex-row;
-      p {
-        width: 50%;
-      }
+    align-items: center;
+    h3 {
+      width: 80%;
+      font-size: 25px;
     }
     button {
+      margin-top: 30px;
       width: 230px;
       height: 50px;
       background-color: $bt-red;
-      color: $font-white;
       border: none;
+      color: $font-white;
+      border-radius: 12px;
       font-size: 16px;
     }
   }
@@ -301,11 +302,11 @@ section {
 .comment {
   @extend %flex-row;
   @extend %component-gap;
-  &-cards{
+  &-cards {
     @extend %flex-colum;
     width: 80%;
     // min-width: 350px;
-    &-card{
+    &-card {
       @extend %flex-row;
       align-items: stretch;
       border: 1px solid red;
@@ -313,78 +314,66 @@ section {
       min-width: 210px;
       margin: 15px;
       padding: 20px;
-      &-article{
+      &-article {
         width: 49%;
         min-width: 200px;
-        img{
+        img {
           width: 50px;
         }
       }
-      &-client{
+      &-client {
         padding-top: 30px;
-        padding-left:60px;
+        padding-left: 60px;
       }
     }
   }
 }
 
-.contact{
+.contact {
   @extend %flex-row;
   @extend %bg-image-set;
   background-image: url(../img/contact.jpg);
-  height: 100%;
-  justify-content: space-around;
+  height: 400px;
+  justify-content: space-evenly;
   align-content: center;
   padding: 60px 0;
-  &-form{
-    @extend %flex-row;
-    form{
-      @extend %flex-colum;
-      text-align: center;
-      input{
-        font-size: 15px;
-        margin-bottom: 20px;
-        width: 300px;
-        height: 30px;
-      }
-      textarea{
-        font-size: 15px;
-        padding: 10px 0 0 10px;
-        margin-bottom: 30px;
-      }
-      div{
-        @extend %flex-row;
-          button{
-            background-color: $bt-red;
-            border-radius: 12px;
-            color: $bg-white;
-            width: 200px;
-            height: 50px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-          }
-      }
-    }
-  }
-  &-details{
+  &-details {
     width: 350px;
     min-width: 300px;
     color: $font-white;
-    h3{
+    h3 {
       font-size: 20px;
+      color: $font-rose;
     }
-    p{
+    p {
       font-size: 18px;
+    }
+    a {
+      text-decoration: underline;
+      color: $font-white;
+      :hover {
+        color: $font-rose;
+      }
     }
   }
 }
 
-footer{
+@media only screen and (max-width: 600px) {
+  .contact {
+    text-align: center;
+  }
+}
+
+footer {
   @extend %flex-row;
-  padding-left: 250px;
   padding-top: 100px;
-  .copyright{
-    width: 80%;
+  .copyright {
+    //width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    text-align: center;
   }
 }

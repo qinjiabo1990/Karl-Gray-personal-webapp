@@ -6,7 +6,15 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script type="text/javascript" src="./js/sidebar.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,9 +22,11 @@
     <title>Healthy Pursuits PT</title>
   </head>
   <body>
-    <header>
+    <header id="nav">
       <nav class="nav">
-        <h2>Logo</h2>
+        <button onclick="sidebar_close()">
+          <i class="material-icons">close</i>
+        </button>
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
@@ -30,12 +40,17 @@
       <div class="container">
         <!--welcome-->
         <div id="home" class="welcome">
+          <div class="welcome-nav">
+            <p>Logo</p>
+            <button onclick="sidebar_open()">☰</button>
+          </div>
           <div class="welcome-text">
-            <h1>HEALTHY PURSUITS PERSONAL TRAINING</h1>
-            <h2>Start The Rest of Your Life Today</h2>
+            <h2>HEALTHY PURSUITS PERSONAL TRAINING</h2>
+            <h1>Start The Rest of Your Life Today</h1>
             <p>Karl Alexander Gray</p>
           </div>
         </div>
+
         <!--introduction-->
         <div id="about" class="intro">
           <div class="intro-text">
@@ -104,28 +119,14 @@
           </div>
         </div>
 
-        <!--Clients-->
-        <div class="clients">
-          <div class="clients-cards">
-            <p>
-              Programs delivered for mums, dads, kids, sporting teams, clubs and
-              the professional sports person.
-            </p>
-          </div>
-        </div>
-
         <!--Program-->
         <div id="programs" class="program">
           <div class="program-text">
-            <h2>Start Transforming Your Body Today</h2>
-            <div class="program-text-article">
-              <p>
-                Start working on your body today, and with our individual
-                fitness program, already in 12 week you will see a totally
-                difference in the mirror!
-              </p>
-            </div>
-            <button>GET MY PROGRAM</button>
+            <h3>
+              Programs delivered for mums, dads, kids, sporting teams, clubs and
+              the professional sports person.
+            </h3>
+            <button href="#contact">GET MY PROGRAM</button>
           </div>
         </div>
 
@@ -167,13 +168,13 @@
             <div class="comment-cards-card">
               <div class="comment-cards-card-article">
                 <img src="./img/sign.png" alt="" />
-                <p>I consider myself fit.
-                  I do at least 3 sessions per week on top
-                  of a morning walk each day, but Karl has taken me to the next
-                  level. Everyone plateaus. I thought I was doing alright, I was
-                  maintaining. I need a well earned kick in the pants. I wasn’t
-                  able to think outside the box. Thanks for making me step it
-                  up.
+                <p>
+                  I consider myself fit. I do at least 3 sessions per week on
+                  top of a morning walk each day, but Karl has taken me to the
+                  next level. Everyone plateaus. I thought I was doing alright,
+                  I was maintaining. I need a well earned kick in the pants. I
+                  wasn’t able to think outside the box. Thanks for making me
+                  step it up.
                 </p>
               </div>
               <div class="comment-cards-card-client">
@@ -186,42 +187,17 @@
 
         <!--contact-->
         <div id="contact" class="contact">
-          <div class="contact-form">
-            <form>
-              <input
-                placeholder="Your Name"
-                type="text"
-                name="user_name"
-                required
-              />
-              <input
-                placeholder="Your Email"
-                type="text"
-                name="user_name"
-                required
-              />
-              <input
-                placeholder="Your Number"
-                type="text"
-                name="user_name"
-                required
-              />
-              <textarea
-                placeholder="Leave me a message"
-                rows="5px"
-                name="message"
-                required
-              ></textarea>
-              <div>
-                <button type="submit">Send Me A Message</button>
-              </div>
-            </form>
-          </div>
           <div class="contact-details">
-            <h3>Need some additional information?</h3>
+            <h2>CONTACT ME</h2>
             <h3>Feel free to get in touch for more personalized training.</h3>
-            <p>Phone: +61 0410 401 280</p>
-            <p>Email: kghealth@hotmail.com</p>
+            <p>Phone:</p>
+            <a href="tel:0410 401 280"><p>0410 401 280</p></a>
+            <p>Click Email:</p>
+            <a
+              href="mailto:kghealth@hotmail.com?Subject=Qeury"
+              data-text="kghealth@hotmail.com"
+              ><p>kghealth@hotmail.com</p></a
+            >
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ $font-article: #cccccc;
 $font-rose: #e2b8aa;
 $bg-white: white;
 $bt-red: rgba(197, 45, 45, 0.89);
-$bg-section: #282828;
+$bg-section: rgb(19, 63, 85);
 $font-title: "Poppins", sans-serif;
 
 %flex-row {
@@ -66,7 +66,7 @@ header {
     width: 100%;
     text-align: center;
     padding-top: 50px;
-
+    
     button {
       border: unset;
       background-color: transparent;
@@ -123,6 +123,10 @@ section {
     width: 80%;
     height: 50px;
     padding-top: 20px;
+    img{
+      width: 100px;
+      height: 100px;
+    }
     button {
       background-color: transparent;
       border: unset;
@@ -155,7 +159,6 @@ section {
 
 .intro {
   @extend %flex-row;
-  @extend %component-gap;
   text-align: center;
   &-text {
     @extend %flex-row;
@@ -185,18 +188,43 @@ section {
   @extend %bg-image-set;
   @extend %flex-row;
   @extend %component-gap;
-  justify-content: space-around;
-  background-image: url(../img/certificate.jpg);
-  width: 100%;
   min-height: 300px;
   height: 100%;
-  align-items: center;
-  &-card {
-    min-width: 200px;
-    text-align: center;
-    color: $font-white;
-    font-size: 25px;
+  &-set{
+    @extend %flex-colum;
+    background-color: $bg-section;
+    width: 90%;
+    &-pair{
+      @extend %flex-row;
+      &-card {
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        color: $font-white;
+        font-size: 20px;
+      }
+    }
   }
+}
+
+.lt{
+  border-right: 1px red solid;
+  border-bottom: 1px red solid;
+}
+
+.rb{
+  border-left: 1px red solid;
+  border-top: 1px red solid;
+}
+
+.rt{
+  border-bottom: 1px red solid;
+  border-left: 1px red solid;
+}
+
+.lb{
+  border-right: 1px red solid;
+  border-top: 1px red solid;
 }
 
 .services {
@@ -329,7 +357,7 @@ section {
   @extend %flex-row;
   @extend %bg-image-set;
   background-image: url(../img/contact.jpg);
-  height: 400px;
+  min-height: 600px;
   justify-content: space-evenly;
   align-content: center;
   padding: 60px 0;

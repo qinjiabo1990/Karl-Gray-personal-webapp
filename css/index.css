@@ -1,11 +1,11 @@
-footer, .contact, .comment-cards-card, .comment, .services-cards-pair, .services, .experience, .intro-text, .intro, .welcome-nav, .welcome, header {
+footer, .contact, .comment-cards-card, .comment, .services-cards-pair, .services, .experience-set-pair, .experience, .intro-text, .intro, .welcome-nav, .welcome, header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.comment-cards, .program-text, .welcome-text, header nav {
+.comment-cards, .program-text, .experience-set, .welcome-text, header nav {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -28,7 +28,7 @@ footer, .contact, .comment-cards-card, .comment, .services-cards-pair, .services
   background-color: rgba(108, 122, 137, 0.5);
 }
 
-.comment, .program, .services, .experience, .intro, .welcome {
+.comment, .program, .services, .experience, .welcome {
   margin-bottom: 10%;
 }
 
@@ -41,7 +41,7 @@ header {
   width: 300px;
   height: 100%;
   color: white;
-  background-color: #282828;
+  background-color: #133f55;
   font-family: "Poppins", sans-serif;
   position: fixed;
   right: 0;
@@ -104,6 +104,10 @@ section {
   height: 50px;
   padding-top: 20px;
 }
+.welcome-nav img {
+  width: 100px;
+  height: 100px;
+}
 .welcome-nav button {
   background-color: transparent;
   border: unset;
@@ -135,7 +139,7 @@ section {
   text-align: center;
 }
 .intro-text {
-  background-color: #282828;
+  background-color: #133f55;
   color: #cccccc;
   width: 90%;
 }
@@ -156,18 +160,39 @@ section {
 }
 
 .experience {
-  justify-content: space-around;
-  background-image: url(../img/certificate.jpg);
-  width: 100%;
   min-height: 300px;
   height: 100%;
-  align-items: center;
 }
-.experience-card {
-  min-width: 200px;
+.experience-set {
+  background-color: #133f55;
+  width: 90%;
+}
+.experience-set-pair-card {
+  width: 200px;
+  height: 200px;
   text-align: center;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
+}
+
+.lt {
+  border-right: 1px red solid;
+  border-bottom: 1px red solid;
+}
+
+.rb {
+  border-left: 1px red solid;
+  border-top: 1px red solid;
+}
+
+.rt {
+  border-bottom: 1px red solid;
+  border-left: 1px red solid;
+}
+
+.lb {
+  border-right: 1px red solid;
+  border-top: 1px red solid;
 }
 
 .services-cards {
@@ -273,7 +298,7 @@ section {
 
 .contact {
   background-image: url(../img/contact.jpg);
-  height: 400px;
+  min-height: 600px;
   justify-content: space-evenly;
   align-content: center;
   padding: 60px 0;

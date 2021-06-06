@@ -118,7 +118,7 @@ section {
   color: $font-white;
   &-nav {
     @extend %flex-row;
-    position: fixed;
+    //position: fixed;
     justify-content: space-between;
     width: 80%;
     height: 50px;
@@ -138,6 +138,7 @@ section {
     @extend %flex-colum;
     justify-content: center;
     align-content: flex-start;
+    margin-top: -250px;
     padding-right: 150px;
     font-family: $font-title;
     width: 80%;
@@ -192,39 +193,64 @@ section {
   height: 100%;
   &-set{
     @extend %flex-colum;
-    background-color: $bg-section;
+    background-color: rgb(19, 63, 85, 0.9);
     width: 90%;
+    padding: 100px 0;
     &-pair{
       @extend %flex-row;
+      align-items: center;
       &-card {
-        width: 200px;
-        height: 200px;
+        @extend %flex-colum;
+        align-items: center;
+        padding: 50px;
+        width: 400px;
+        height: 300px;
         text-align: center;
         color: $font-white;
         font-size: 20px;
+        img{
+          width: 70px;
+          height: 70px;
+        }
       }
     }
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .experience-set-pair-card{
+    width: 300px;
+    padding: 50px 50px 0 50px;
+  }
+}
+
 .lt{
-  border-right: 1px red solid;
-  border-bottom: 1px red solid;
+  border-right: 1px $font-white solid;
+  border-bottom: 1px $font-white solid;
 }
 
 .rb{
-  border-left: 1px red solid;
-  border-top: 1px red solid;
+  border-left: 1px $font-white solid;
+  border-top: 1px $font-white solid;
 }
 
 .rt{
-  border-bottom: 1px red solid;
-  border-left: 1px red solid;
+  border-bottom: 1px $font-white solid;
+  border-left: 1px $font-white solid;
 }
 
 .lb{
-  border-right: 1px red solid;
-  border-top: 1px red solid;
+  border-right: 1px $font-white solid;
+  border-top: 1px $font-white solid;
+}
+
+@media only screen and (max-width: 900px) {
+  .lt, .rb, .rt, .lb{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px $font-white solid;
+  }
 }
 
 .services {

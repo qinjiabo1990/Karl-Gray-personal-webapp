@@ -5,7 +5,7 @@ footer, .contact, .comment-cards-card, .comment, .services-cards-pair, .services
   justify-content: center;
 }
 
-.comment-cards, .program-text, .experience-set, .welcome-text, header nav {
+.comment-cards, .program-text, .experience-set-pair-card, .experience-set, .welcome-text, header nav {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -98,7 +98,6 @@ section {
   color: white;
 }
 .welcome-nav {
-  position: fixed;
   justify-content: space-between;
   width: 80%;
   height: 50px;
@@ -117,6 +116,7 @@ section {
 .welcome-text {
   justify-content: center;
   align-content: flex-start;
+  margin-top: -250px;
   padding-right: 150px;
   font-family: "Poppins", sans-serif;
   width: 80%;
@@ -164,37 +164,61 @@ section {
   height: 100%;
 }
 .experience-set {
-  background-color: #133f55;
+  background-color: rgba(19, 63, 85, 0.9);
   width: 90%;
+  padding: 100px 0;
+}
+.experience-set-pair {
+  align-items: center;
 }
 .experience-set-pair-card {
-  width: 200px;
-  height: 200px;
+  align-items: center;
+  padding: 50px;
+  width: 400px;
+  height: 300px;
   text-align: center;
   color: white;
   font-size: 20px;
 }
+.experience-set-pair-card img {
+  width: 70px;
+  height: 70px;
+}
 
+@media only screen and (max-width: 900px) {
+  .experience-set-pair-card {
+    width: 300px;
+    padding: 50px 50px 0 50px;
+  }
+}
 .lt {
-  border-right: 1px red solid;
-  border-bottom: 1px red solid;
+  border-right: 1px white solid;
+  border-bottom: 1px white solid;
 }
 
 .rb {
-  border-left: 1px red solid;
-  border-top: 1px red solid;
+  border-left: 1px white solid;
+  border-top: 1px white solid;
 }
 
 .rt {
-  border-bottom: 1px red solid;
-  border-left: 1px red solid;
+  border-bottom: 1px white solid;
+  border-left: 1px white solid;
 }
 
 .lb {
-  border-right: 1px red solid;
-  border-top: 1px red solid;
+  border-right: 1px white solid;
+  border-top: 1px white solid;
 }
 
+@media only screen and (max-width: 900px) {
+  .lt, .rb, .rt, .lb {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px white solid;
+  }
+}
 .services-cards {
   width: 70%;
 }

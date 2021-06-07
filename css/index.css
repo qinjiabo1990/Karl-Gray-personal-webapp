@@ -117,10 +117,10 @@ section {
 .welcome-text {
   justify-content: center;
   align-content: flex-start;
-  margin-top: -250px;
   padding-right: 150px;
   font-family: "Poppins", sans-serif;
   width: 80%;
+  margin-top: 100px;
 }
 .welcome-text h1 {
   font-size: 40px;
@@ -128,9 +128,9 @@ section {
   color: #e2b8aa;
 }
 .welcome-text h2 {
-  width: 300px;
+  width: 280px;
   color: white;
-  margin-top: 10%;
+  font-size: 1.8rem;
 }
 .welcome-text p {
   font-size: 25px;
@@ -235,12 +235,11 @@ section {
   position: relative;
   z-index: -1;
   width: 100%;
-  min-width: 200px;
-  height: 200px;
+  height: 280px;
   background-image: url(../img/strength.jpg);
 }
 .services-cards-top p {
-  top: 100px;
+  top: 160px;
 }
 .services-cards-pair {
   margin-top: 15px;
@@ -276,6 +275,15 @@ section {
   background-image: url(../img/season-conditioning.jpg);
 }
 
+@media only screen and (max-width: 600px) {
+  .services-cards-pair-cardio,
+.services-cards-pair-sport,
+.services-cards-pair-injury,
+.services-cards-pair-conditioning {
+    width: 100%;
+    margin: 0;
+  }
+}
 .program {
   background-image: url(../img/program.jpg);
   height: 400px;

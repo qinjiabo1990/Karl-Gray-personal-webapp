@@ -98,6 +98,7 @@ section {
   color: white;
 }
 .welcome-nav {
+  position: absolute;
   justify-content: space-between;
   width: 80%;
   height: 50px;
@@ -150,7 +151,7 @@ section {
 .intro-text-format h2 {
   margin-top: 10%;
   margin-bottom: 10%;
-  font-size: 35px;
+  font-size: 2rem;
   color: white;
   font-family: "Poppins", sans-serif;
 }
@@ -159,6 +160,14 @@ section {
   color: white;
 }
 
+@media only screen and (max-width: 600px) {
+  .intro-text-format h2 {
+    font-size: 1.5rem;
+  }
+  .intro-text-format h4 {
+    font-size: 1.2rem;
+  }
+}
 .experience {
   min-height: 300px;
   height: 100%;

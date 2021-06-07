@@ -118,7 +118,7 @@ section {
   color: $font-white;
   &-nav {
     @extend %flex-row;
-    //position: fixed;
+    position: absolute;
     justify-content: space-between;
     width: 80%;
     height: 50px;
@@ -173,7 +173,7 @@ section {
       h2 {
         margin-top: 10%;
         margin-bottom: 10%;
-        font-size: 35px;
+        font-size: 2rem;
         color: $font-white;
         font-family: $font-title;
       }
@@ -181,6 +181,17 @@ section {
         font-size: 20px;
         color: $font-white;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .intro-text-format{
+    h2{
+      font-size: 1.5rem;
+    }
+    h4{
+      font-size: 1.2rem;
     }
   }
 }

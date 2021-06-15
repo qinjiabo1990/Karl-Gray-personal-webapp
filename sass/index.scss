@@ -7,8 +7,8 @@ $bg-white: white;
 $bt-red: rgba(197, 45, 45, 0.89);
 $bg-section: rgb(19, 63, 85);
 $font-title: "Poppins", sans-serif;
-$font-text: 'Nunito', sans-serif;
-$font-subtitle: 'Roboto', sans-serif;
+$font-text: "Nunito", sans-serif;
+$font-subtitle: "Roboto", sans-serif;
 
 %flex-row {
   display: flex;
@@ -51,32 +51,48 @@ $font-subtitle: 'Roboto', sans-serif;
   font-family: inherit;
 }
 
-header {
-  @extend %flex-row;
+@media only screen and (max-width: 600px) {
+  #toggle{
+    padding-left: 50%
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #toggle{
+    padding-left: 0
+  }
+}
+
+.nav-close {
+  @extend %flex-colum;
   width: 300px;
   height: 100%;
-  color: $font-white;
-  background-color: $bg-section;
-  font-family: $font-title;
+  text-align: center;
   position: fixed;
-  right: 0;
+  right: 0px;
   top: 0;
-  display: none;
-  z-index: 1;
-  nav {
+  background-color: transparent;
+  button {
+    padding-top: 10%;
+    padding-left: 30%;
+    border: unset;
+    background-color: transparent;
+    color: $font-blue;
+    font-size: 24px;
+    i {
+      font-size: 30px;
+    }
+    z-index: 1;
+  }
+  span {
+    display: none;
+  }
+  &-hidden {
     @extend %flex-colum;
     width: 100%;
-    text-align: center;
-    padding-top: 50px;
-    
-    button {
-      border: unset;
-      background-color: transparent;
-      color: $font-blue;
-      i {
-        font-size: 30px;
-      }
-    }
+    padding-top: 100px;
+    color: black;
+    z-index: 1;
     a {
       margin-top: 30px;
       text-decoration: none;
@@ -88,6 +104,48 @@ header {
     }
   }
 }
+
+.nav-open {
+  @extend %flex-colum;
+  width: 300px;
+  height: 100%;
+  text-align: center;
+  position: fixed;
+  right: 0px;
+  top: 0;
+  background-color: $bg-section;
+  z-index: 1;
+  button {
+    border: unset;
+    background-color: transparent;
+    color: $font-blue;
+    i {
+      font-size: 30px;
+    }
+    z-index: 1;
+  }
+  span {
+    display: block;
+    
+  }
+  &-hidden {
+    @extend %flex-colum;
+    width: 100%;
+    padding-top: 100px;
+    color: black;
+    z-index: 1;
+    a {
+      margin-top: 30px;
+      text-decoration: none;
+      color: $font-white;
+      font-size: 20px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 
 @media only screen and (max-width: 600px) {
   body {
@@ -120,20 +178,15 @@ section {
   color: $font-white;
   &-nav {
     @extend %flex-row;
-    position: absolute;
+    position: fixed;
     justify-content: space-between;
-    width: 80%;
+    //width: 80%;
+    left: 10%;
     height: 50px;
     padding-top: 20px;
-    img{
+    img {
       width: 100px;
       height: 100px;
-    }
-    button {
-      background-color: transparent;
-      border: unset;
-      color: $font-blue;
-      font-size: 20px;
     }
   }
   &-text {
@@ -190,11 +243,11 @@ section {
 }
 
 @media only screen and (max-width: 600px) {
-  .intro-text-format{
-    h2{
+  .intro-text-format {
+    h2 {
       font-size: 1.5rem;
     }
-    h4{
+    h4 {
       font-size: 1.2rem;
     }
   }
@@ -206,12 +259,12 @@ section {
   @extend %component-gap;
   min-height: 300px;
   height: 100%;
-  &-set{
+  &-set {
     @extend %flex-colum;
     background-color: rgb(19, 63, 85, 0.9);
     width: 90%;
     padding: 100px 0;
-    &-pair{
+    &-pair {
       @extend %flex-row;
       align-items: center;
       &-card {
@@ -223,7 +276,7 @@ section {
         text-align: center;
         color: $font-white;
         font-size: 20px;
-        img{
+        img {
           width: 70px;
           height: 70px;
         }
@@ -233,34 +286,37 @@ section {
 }
 
 @media only screen and (max-width: 900px) {
-  .experience-set-pair-card{
+  .experience-set-pair-card {
     width: 300px;
     padding: 50px 50px 0 50px;
   }
 }
 
-.lt{
+.lt {
   border-right: 1px $font-white solid;
   border-bottom: 1px $font-white solid;
 }
 
-.rb{
+.rb {
   border-left: 1px $font-white solid;
   border-top: 1px $font-white solid;
 }
 
-.rt{
+.rt {
   border-bottom: 1px $font-white solid;
   border-left: 1px $font-white solid;
 }
 
-.lb{
+.lb {
   border-right: 1px $font-white solid;
   border-top: 1px $font-white solid;
 }
 
 @media only screen and (max-width: 900px) {
-  .lt, .rb, .rt, .lb{
+  .lt,
+  .rb,
+  .rt,
+  .lb {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -276,7 +332,7 @@ section {
     &-top {
       @extend %bg-image-set;
       @extend %card-text;
-      p{
+      p {
         top: 160px;
       }
       position: relative;
@@ -331,10 +387,10 @@ section {
 }
 
 @media only screen and (max-width: 600px) {
-  .services-cards-pair-cardio, 
+  .services-cards-pair-cardio,
   .services-cards-pair-sport,
   .services-cards-pair-injury,
-  .services-cards-pair-conditioning{
+  .services-cards-pair-conditioning {
     width: 100%;
     margin: 0;
   }
@@ -396,7 +452,7 @@ section {
         img {
           width: 50px;
         }
-        p{
+        p {
           font-family: $font-text;
         }
       }

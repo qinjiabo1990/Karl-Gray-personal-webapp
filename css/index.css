@@ -1,11 +1,11 @@
-footer, .contact, .comment-cards-card, .comment, .services-cards-pair, .services, .experience-set-pair, .experience, .intro-text, .intro, .welcome-nav, .welcome, header {
+footer, .contact, .comment-cards-card, .comment, .services-cards-pair, .services, .experience-set-pair, .experience, .intro-text, .intro, .welcome-nav, .welcome {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.comment-cards, .program-text, .experience-set-pair-card, .experience-set, .welcome-text, header nav {
+.comment-cards, .program-text, .experience-set-pair-card, .experience-set, .welcome-text, .nav-open-hidden, .nav-open, .nav-close-hidden, .nav-close {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -37,38 +37,91 @@ footer, .contact, .comment-cards-card, .comment, .services-cards-pair, .services
   font-family: inherit;
 }
 
-header {
+@media only screen and (max-width: 600px) {
+  #toggle {
+    padding-left: 50%;
+  }
+}
+@media screen and (min-width: 900px) {
+  #toggle {
+    padding-left: 0;
+  }
+}
+.nav-close {
   width: 300px;
   height: 100%;
-  color: white;
-  background-color: #133f55;
-  font-family: "Poppins", sans-serif;
-  position: fixed;
-  right: 0;
-  top: 0;
-  display: none;
-  z-index: 1;
-}
-header nav {
-  width: 100%;
   text-align: center;
-  padding-top: 50px;
+  position: fixed;
+  right: 0px;
+  top: 0;
+  background-color: transparent;
 }
-header nav button {
+.nav-close button {
+  padding-top: 10%;
+  padding-left: 30%;
   border: unset;
   background-color: transparent;
   color: #39a7df;
+  font-size: 24px;
+  z-index: 1;
 }
-header nav button i {
+.nav-close button i {
   font-size: 30px;
 }
-header nav a {
+.nav-close span {
+  display: none;
+}
+.nav-close-hidden {
+  width: 100%;
+  padding-top: 100px;
+  color: black;
+  z-index: 1;
+}
+.nav-close-hidden a {
   margin-top: 30px;
   text-decoration: none;
   color: white;
   font-size: 20px;
 }
-header nav a:hover {
+.nav-close-hidden a:hover {
+  text-decoration: underline;
+}
+
+.nav-open {
+  width: 300px;
+  height: 100%;
+  text-align: center;
+  position: fixed;
+  right: 0px;
+  top: 0;
+  background-color: #133f55;
+  z-index: 1;
+}
+.nav-open button {
+  border: unset;
+  background-color: transparent;
+  color: #39a7df;
+  z-index: 1;
+}
+.nav-open button i {
+  font-size: 30px;
+}
+.nav-open span {
+  display: block;
+}
+.nav-open-hidden {
+  width: 100%;
+  padding-top: 100px;
+  color: black;
+  z-index: 1;
+}
+.nav-open-hidden a {
+  margin-top: 30px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.nav-open-hidden a:hover {
   text-decoration: underline;
 }
 
@@ -98,21 +151,15 @@ section {
   color: white;
 }
 .welcome-nav {
-  position: absolute;
+  position: fixed;
   justify-content: space-between;
-  width: 80%;
+  left: 10%;
   height: 50px;
   padding-top: 20px;
 }
 .welcome-nav img {
   width: 100px;
   height: 100px;
-}
-.welcome-nav button {
-  background-color: transparent;
-  border: unset;
-  color: #39a7df;
-  font-size: 20px;
 }
 .welcome-text {
   justify-content: center;
@@ -223,7 +270,10 @@ section {
 }
 
 @media only screen and (max-width: 900px) {
-  .lt, .rb, .rt, .lb {
+  .lt,
+.rb,
+.rt,
+.lb {
     border-top: none;
     border-left: none;
     border-right: none;

@@ -32,27 +32,34 @@
     <title>Healthy Pursuits PT</title>
   </head>
   <body>
+
+
     <header id="nav">
-      <nav class="nav">
-        <button onclick="sidebar_close()">
-          <i class="material-icons">close</i>
+      <nav class="nav-close">
+        <button id="toggle" onclick="sidebar_open()">
+          ☰
         </button>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#programs">Programs</a>
-        <a href="#comment">Comment</a>
-        <a href="#contact">Contact</a>
+        <span>
+          <div class="nav-close-hidden">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#programs">Programs</a>
+            <a href="#comment">Comment</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </span>
       </nav>
     </header>
 
+
+    
     <section>
       <div class="container">
         <!--welcome-->
         <div id="home" class="welcome">
           <div class="welcome-nav">
             <img src="./img/pt-logo.png" alt="Logo" />
-            <button onclick="sidebar_open()">☰</button>
           </div>
           <div class="welcome-text">
             <h2>HEALTHY PURSUITS PERSONAL TRAINING</h2>

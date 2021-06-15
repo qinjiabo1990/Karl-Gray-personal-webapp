@@ -340,7 +340,6 @@ section {
   background-image: url(../img/program.jpg);
   height: 400px;
   position: relative;
-  z-index: -1;
 }
 .program-text {
   align-content: center;
@@ -356,16 +355,19 @@ section {
   font-size: 25px;
   font-family: #cccccc;
 }
-.program-text button {
+.program-text a {
   margin-top: 30px;
-  width: 230px;
-  height: 50px;
+  padding: 20px 50px;
   background-color: rgba(19, 63, 85, 0.9);
   border: none;
   color: white;
   border-radius: 12px;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+.program-text a:hover {
+  text-decoration: underline;
 }
 
 .comment-cards {

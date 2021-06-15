@@ -180,7 +180,6 @@ section {
     @extend %flex-row;
     position: fixed;
     justify-content: space-between;
-    //width: 80%;
     left: 10%;
     height: 50px;
     padding-top: 20px;
@@ -402,7 +401,6 @@ section {
   background-image: url(../img/program.jpg);
   height: 400px;
   position: relative;
-  z-index: -1;
   &-text {
     @extend %flex-colum;
     align-content: center;
@@ -417,16 +415,19 @@ section {
       font-size: 25px;
       font-family: $font-article;
     }
-    button {
+    a {
       margin-top: 30px;
-      width: 230px;
-      height: 50px;
+      padding: 20px 50px;
       background-color: rgb(19, 63, 85, 0.9);
       border: none;
       color: $font-white;
       border-radius: 12px;
       font-size: 16px;
       font-family: $font-subtitle;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
 }

@@ -57,7 +57,7 @@ header nav {
 header nav button {
   border: unset;
   background-color: transparent;
-  color: #e2b8aa;
+  color: #39a7df;
 }
 header nav button i {
   font-size: 30px;
@@ -111,7 +111,7 @@ section {
 .welcome-nav button {
   background-color: transparent;
   border: unset;
-  color: #e2b8aa;
+  color: #39a7df;
   font-size: 20px;
 }
 .welcome-text {
@@ -125,15 +125,16 @@ section {
 .welcome-text h1 {
   font-size: 40px;
   width: 260px;
-  color: #e2b8aa;
+  color: white;
 }
 .welcome-text h2 {
   width: 280px;
-  color: white;
+  color: #39a7df;
   font-size: 1.8rem;
 }
 .welcome-text p {
   font-size: 25px;
+  color: #39a7df;
 }
 
 .intro {
@@ -158,6 +159,7 @@ section {
 .intro-text-format h4 {
   font-size: 20px;
   color: white;
+  font-family: "Roboto", sans-serif;
 }
 
 @media only screen and (max-width: 600px) {
@@ -302,16 +304,18 @@ section {
 .program-text h3 {
   width: 80%;
   font-size: 25px;
+  font-family: #cccccc;
 }
 .program-text button {
   margin-top: 30px;
   width: 230px;
   height: 50px;
-  background-color: rgba(197, 45, 45, 0.89);
+  background-color: rgba(19, 63, 85, 0.9);
   border: none;
   color: white;
   border-radius: 12px;
   font-size: 16px;
+  font-family: "Roboto", sans-serif;
 }
 
 .comment-cards {
@@ -319,7 +323,7 @@ section {
 }
 .comment-cards-card {
   align-items: stretch;
-  border: 1px solid red;
+  border: 1px solid #39a7df;
   border-radius: 12px;
   min-width: 210px;
   margin: 15px;
@@ -332,9 +336,13 @@ section {
 .comment-cards-card-article img {
   width: 50px;
 }
+.comment-cards-card-article p {
+  font-family: "Nunito", sans-serif;
+}
 .comment-cards-card-client {
-  padding-top: 30px;
+  padding-top: 40px;
   padding-left: 60px;
+  font-family: "Roboto", sans-serif;
 }
 
 .contact {
@@ -351,17 +359,17 @@ section {
 }
 .contact-details h3 {
   font-size: 20px;
-  color: #e2b8aa;
+  color: #39a7df;
 }
 .contact-details p {
   font-size: 18px;
 }
 .contact-details a {
   text-decoration: underline;
-  color: white;
+  color: #39a7df;
 }
 .contact-details a :hover {
-  color: #e2b8aa;
+  color: #39a7df;
 }
 
 @media only screen and (max-width: 600px) {

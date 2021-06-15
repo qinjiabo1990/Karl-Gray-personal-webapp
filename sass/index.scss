@@ -2,11 +2,13 @@ $font-gray: gray;
 $font-black: black;
 $font-white: white;
 $font-article: #cccccc;
-$font-rose: #e2b8aa;
+$font-blue: #39a7df;
 $bg-white: white;
 $bt-red: rgba(197, 45, 45, 0.89);
 $bg-section: rgb(19, 63, 85);
 $font-title: "Poppins", sans-serif;
+$font-text: 'Nunito', sans-serif;
+$font-subtitle: 'Roboto', sans-serif;
 
 %flex-row {
   display: flex;
@@ -70,7 +72,7 @@ header {
     button {
       border: unset;
       background-color: transparent;
-      color: $font-rose;
+      color: $font-blue;
       i {
         font-size: 30px;
       }
@@ -130,7 +132,7 @@ section {
     button {
       background-color: transparent;
       border: unset;
-      color: $font-rose;
+      color: $font-blue;
       font-size: 20px;
     }
   }
@@ -145,15 +147,16 @@ section {
     h1 {
       font-size: 40px;
       width: 260px;
-      color: $font-rose;
+      color: $font-white;
     }
     h2 {
       width: 280px;
-      color: $font-white;
+      color: $font-blue;
       font-size: 1.8rem;
     }
     p {
       font-size: 25px;
+      color: $font-blue;
     }
   }
 }
@@ -180,6 +183,7 @@ section {
       h4 {
         font-size: 20px;
         color: $font-white;
+        font-family: $font-subtitle;
       }
     }
   }
@@ -355,16 +359,18 @@ section {
     h3 {
       width: 80%;
       font-size: 25px;
+      font-family: $font-article;
     }
     button {
       margin-top: 30px;
       width: 230px;
       height: 50px;
-      background-color: $bt-red;
+      background-color: rgb(19, 63, 85, 0.9);
       border: none;
       color: $font-white;
       border-radius: 12px;
       font-size: 16px;
+      font-family: $font-subtitle;
     }
   }
 }
@@ -379,7 +385,7 @@ section {
     &-card {
       @extend %flex-row;
       align-items: stretch;
-      border: 1px solid red;
+      border: 1px solid $font-blue;
       border-radius: 12px;
       min-width: 210px;
       margin: 15px;
@@ -390,10 +396,14 @@ section {
         img {
           width: 50px;
         }
+        p{
+          font-family: $font-text;
+        }
       }
       &-client {
-        padding-top: 30px;
+        padding-top: 40px;
         padding-left: 60px;
+        font-family: $font-subtitle;
       }
     }
   }
@@ -413,16 +423,16 @@ section {
     color: $font-white;
     h3 {
       font-size: 20px;
-      color: $font-rose;
+      color: $font-blue;
     }
     p {
       font-size: 18px;
     }
     a {
       text-decoration: underline;
-      color: $font-white;
+      color: $font-blue;
       :hover {
-        color: $font-rose;
+        color: $font-blue;
       }
     }
   }

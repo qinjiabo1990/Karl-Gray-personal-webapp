@@ -328,21 +328,40 @@ section {
   @extend %component-gap;
   &-cards {
     width: 70%;
-    &-top {
-      @extend %bg-image-set;
-      @extend %card-text;
-      p {
-        top: 160px;
-      }
-      position: relative;
-      z-index: -1;
-      width: 100%;
-      height: 280px;
-      background-image: url(../img/strength.jpg);
-    }
+    // &-top {
+    //   @extend %bg-image-set;
+    //   @extend %card-text;
+    //   p {
+    //     top: 160px;
+    //   }
+    //   position: relative;
+    //   z-index: -1;
+    //   width: 100%;
+    //   height: 280px;
+    //   background-image: url(../img/strength.jpg);
+    // }
     &-pair {
       @extend %flex-row;
       margin-top: 15px;
+      &-strength{
+        @extend %bg-image-set;
+        position: relative;
+        z-index: -1;
+        @extend %card-text;
+        width: 49%;
+        height: 400px;
+        background-image: url(../img/strength.jpg);
+        margin-right: 2%;
+      }
+      &-kids{
+        @extend %bg-image-set;
+        position: relative;
+        z-index: -1;
+        @extend %card-text;
+        width: 49%;
+        height: 400px;
+        background-image: url(../img/kids.jpg);
+      }
       &-cardio {
         @extend %bg-image-set;
         position: relative;

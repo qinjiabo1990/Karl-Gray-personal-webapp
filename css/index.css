@@ -333,12 +333,15 @@ section {
 }
 
 @media only screen and (max-width: 600px) {
-  .services-cards-pair-cardio,
+  .services-cards-pair-strength,
+.services-cards-pair-kids,
+.services-cards-pair-cardio,
 .services-cards-pair-sport,
 .services-cards-pair-injury,
 .services-cards-pair-conditioning {
     width: 100%;
     margin: 0;
+    background-position: center;
   }
 }
 .program {
